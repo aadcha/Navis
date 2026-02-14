@@ -1,0 +1,238 @@
+.enterprise {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--navis-bg);
+}
+
+.enterprise-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--navis-border);
+  background: var(--navis-surface);
+}
+
+.enterprise-header .back-btn {
+  color: var(--navis-text-muted);
+  font-size: 0.9rem;
+}
+
+.enterprise-header .back-btn:hover {
+  color: var(--navis-accent);
+}
+
+.enterprise-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  min-height: 0;
+}
+
+.enterprise-main {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: auto;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--navis-surface-elevated);
+  border: 1px solid var(--navis-border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--navis-text);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--navis-text-muted);
+}
+
+.risk-slider-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.risk-slider-section label {
+  font-size: 0.9rem;
+  color: var(--navis-text-muted);
+  min-width: 180px;
+}
+
+.risk-slider {
+  flex: 1;
+  max-width: 300px;
+  height: 6px;
+  -webkit-appearance: none;
+  background: var(--navis-surface-elevated);
+  border-radius: 3px;
+}
+
+.risk-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--navis-accent);
+  cursor: pointer;
+}
+
+.risk-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  min-width: 2rem;
+}
+
+.fleet-map {
+  flex: 1;
+  min-height: 280px;
+  background: var(--navis-surface);
+  border: 1px solid var(--navis-border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fleet-map .world-map {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  aspect-ratio: 2;
+}
+
+.fleet-map .ship-blip {
+  cursor: pointer;
+  transition: r 0.2s, opacity 0.2s;
+}
+
+.fleet-map .ship-blip:hover {
+  r: 1.5;
+}
+
+.enterprise-sidebar {
+  border-left: 1px solid var(--navis-border);
+  background: var(--navis-surface);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-section {
+  padding: 1rem;
+  border-bottom: 1px solid var(--navis-border);
+}
+
+.sidebar-section h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.flagged-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.flagged-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+.flagged-item:hover,
+.flagged-item.selected {
+  background: var(--navis-surface-elevated);
+}
+
+.flagged-item strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.flagged-item span {
+  font-size: 0.75rem;
+  color: var(--navis-text-muted);
+}
+
+.vessel-detail {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.vessel-detail h3 {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  font-size: 0.85rem;
+}
+
+.detail-row span {
+  color: var(--navis-text-muted);
+}
+
+.anomalies {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--navis-border);
+}
+
+.anomalies span {
+  font-size: 0.8rem;
+  color: var(--navis-text-muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.anomalies ul {
+  list-style: none;
+}
+
+.anomalies li {
+  font-size: 0.85rem;
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.anomalies li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--navis-warning);
+}
+
+.vessel-detail p {
+  font-size: 0.85rem;
+  color: var(--navis-text-muted);
+}

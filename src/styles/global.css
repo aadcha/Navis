@@ -1,0 +1,51 @@
+:root {
+  --navis-bg: #0a0e14;
+  --navis-surface: #12171f;
+  --navis-surface-elevated: #1a212c;
+  --navis-border: rgba(0, 212, 170, 0.15);
+  --navis-accent: #00d4aa;
+  --navis-accent-dim: #00a884;
+  --navis-blue: #0099ff;
+  --navis-text: #e6edf3;
+  --navis-text-muted: #8b949e;
+  --navis-danger: #ff6b6b;
+  --navis-warning: #ffd93d;
+  --navis-safe: #6bcb77;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--navis-bg);
+  color: var(--navis-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
