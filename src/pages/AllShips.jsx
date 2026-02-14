@@ -63,6 +63,10 @@ export default function AllShips() {
             zoom={2}
             className="world-map-leaflet"
             zoomControl={false}
+            maxBounds={[[-85, -180], [85, 180]]}
+            maxBoundsViscosity={1}
+            minZoom={2}
+            maxZoom={18}
           >
             <ZoomControl position="bottomright" />
             <TileLayer
